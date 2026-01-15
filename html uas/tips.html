@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Perawatan Tanaman | Tanaman.id</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tanaman.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="loader-circle"></circle>
+            </svg>
+            <div class="loader-text">Greenleaf</div>
+        </div>
+    </div>
+    
+    <!-- Cursor Custom -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="highlight">GREEN</span>LEAF
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li class="active"><a href="tips.html" class="nav-link">Tips Perawatan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="#" class="nav-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a></li>
+                <li><a href="#" class="btn-primary">Belanja Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tips Page Section -->
+    <section class="tips-page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Panduan Lengkap</div>
+                <h1 class="section-title">Tips <span class="highlight">Perawatan</span> Tanaman</h1>
+                <p class="section-description">Pelajari cara merawat tanaman dengan benar untuk menjaga keindahan dan kesehatan tanaman Anda. Panduan lengkap untuk pemula hingga ahli.</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="tips-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cari tips perawatan..." id="search-tips">
+                    <button class="btn-primary">Cari</button>
+                </div>
+            </div>
+
+            <!-- Tips Categories -->
+            <div class="tips-categories">
+                <button class="tip-category-btn active" data-category="all">Semua</button>
+                <button class="tip-category-btn" data-category="penyiraman">Penyiraman</button>
+                <button class="tip-category-btn" data-category="pencahayaan">Pencahayaan</button>
+                <button class="tip-category-btn" data-category="pemupukan">Pemupukan</button>
+                <button class="tip-category-btn" data-category="pot">Media Tanam & Pot</button>
+                <button class="tip-category-btn" data-category="hama">Hama & Penyakit</button>
+                <button class="tip-category-btn" data-category="indoor">Tanaman Indoor</button>
+                <button class="tip-category-btn" data-category="outdoor">Tanaman Outdoor</button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="tips-content-container">
+                <!-- Sidebar -->
+                <aside class="tips-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Kategori Populer</h3>
+                        <ul class="widget-categories">
+                            <li><a href="#" data-category="penyiraman"><i class="fas fa-tint"></i> Teknik Penyiraman</a></li>
+                            <li><a href="#" data-category="pencahayaan"><i class="fas fa-sun"></i> Pengaturan Cahaya</a></li>
+                            <li><a href="#" data-category="pemupukan"><i class="fas fa-seedling"></i> Jenis Pupuk</a></li>
+                            <li><a href="#" data-category="hama"><i class="fas fa-bug"></i> Pengendalian Hama</a></li>
+                            <li><a href="#" data-category="indoor"><i class="fas fa-home"></i> Tanaman Indoor</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Artikel Terbaru</h3>
+                        <div class="recent-articles">
+                            <div class="recent-article">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR79z0-F9g65PDJU5JRfrgGUEF6RwtrM-59oQ&s" alt="Artikel Terbaru">
+                                <div class="recent-content">
+                                    <h4>7 Tanda Tanaman Stress</h4>
+                                    <span><i class="far fa-calendar"></i> 20 April 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-article">
+                                <img src="https://awsimages.detik.net.id/community/media/visual/2025/03/27/ilustrasi-tanaman-layu-atau-mati-1743049326352_169.jpeg?w=600&q=90" alt="Artikel Terbaru">
+                                <div class="recent-content">
+                                    <h4>Panduan Repotting Tanaman</h4>
+                                    <span><i class="far fa-calendar"></i> 18 April 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-article">
+                                <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Artikel Terbaru">
+                                <div class="recent-content">
+                                    <h4>Manfaat Tanaman di Ruangan</h4>
+                                    <span><i class="far fa-calendar"></i> 15 April 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Unduh Panduan</h3>
+                        <div class="download-guide">
+                            <i class="fas fa-file-pdf"></i>
+                            <h4>Panduan Lengkap Perawatan Tanaman</h4>
+                            <p>PDF, 2.4 MB</p>
+                            <a href="#" class="btn-secondary"><i class="fas fa-download"></i> Unduh Gratis</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget consultation-widget">
+                        <h3 class="widget-title">Konsultasi Gratis</h3>
+                        <p>Butuh bantuan untuk tanaman Anda? Konsultasi dengan ahli tanaman kami.</p>
+                        <a href="kontak.html" class="btn-primary"><i class="fas fa-comments"></i> Konsultasi Sekarang</a>
+                    </div>
+                </aside>
+
+                <!-- Main Tips Content -->
+                <main class="tips-main-content">
+                    <!-- Featured Article -->
+                    <article class="featured-article" data-category="penyiraman">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tips Penyiraman">
+                            <div class="featured-badge">Artikel Unggulan</div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="article-meta">
+                                <span class="article-category">Penyiraman</span>
+                                <span class="article-date"><i class="far fa-calendar"></i> 25 April 2024</span>
+                                <span class="article-read"><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2>Panduan Lengkap Teknik Penyiraman Tanaman yang Tepat</h2>
+                            <p class="article-excerpt">Pelajari cara menyiram tanaman dengan benar berdasarkan jenis tanaman, musim, dan kondisi lingkungan. Hindari kesalahan umum yang sering dilakukan pemula.</p>
+                            <div class="article-stats">
+                                <span><i class="far fa-eye"></i> 1.2k dilihat</span>
+                                <span><i class="far fa-comment"></i> 45 komentar</span>
+                                <span><i class="far fa-heart"></i> 89 disukai</span>
+                            </div>
+                            <a href="#" class="btn-primary">Baca Selengkapnya</a>
+                        </div>
+                    </article>
+
+                    <!-- Tips Grid -->
+                    <div class="tips-grid-detailed">
+                        <!-- Tip 1 -->
+                        <article class="tip-detailed" data-category="pencahayaan">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pencahayaan Tanaman">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Pencahayaan</span>
+                                    <span class="article-date"><i class="far fa-calendar"></i> 22 April 2024</span>
+                                </div>
+                                <h3>Memahami Kebutuhan Cahaya untuk Setiap Jenis Tanaman</h3>
+                                <p class="article-excerpt">Tidak semua tanaman membutuhkan jumlah cahaya yang sama. Pelajari cara mengatur posisi tanaman berdasarkan kebutuhan cahayanya.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Cahaya Rendah</span>
+                                    <span class="tag">Cahaya Sedang</span>
+                                    <span class="tag">Cahaya Tinggi</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Tip 2 -->
+                        <article class="tip-detailed" data-category="pemupukan">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pemupukan Tanaman">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Pemupukan</span>
+                                    <span class="article-date"><i class="far fa-calendar"></i> 20 April 2024</span>
+                                </div>
+                                <h3>Jenis-Jenis Pupuk dan Cara Penggunaannya yang Tepat</h3>
+                                <p class="article-excerpt">Pilih pupuk yang sesuai untuk tanaman Anda. Panduan lengkap tentang pupuk organik, anorganik, dan waktu pemupukan yang tepat.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Pupuk Organik</span>
+                                    <span class="tag">Pupuk Cair</span>
+                                    <span class="tag">NPK</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Tip 3 -->
+                        <article class="tip-detailed" data-category="hama">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pengendalian Hama">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Hama & Penyakit</span>
+                                    <span class="article-date"><i class="far fa-calendar"></i> 18 April 2024</span>
+                                </div>
+                                <h3>Cara Mengidentifikasi dan Mengatasi Hama Tanaman</h3>
+                                <p class="article-excerpt">Kenali gejala serangan hama dan penyakit pada tanaman Anda. Solusi alami dan kimia untuk mengendalikan hama.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Kutu Daun</span>
+                                    <span class="tag">Jamur</span>
+                                    <span class="tag">Pengendalian Alami</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Tip 4 -->
+                        <article class="tip-detailed" data-category="pot">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Media Tanam">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Media Tanam & Pot</span>
+                                    <span class="article-date"><i class="far fa-calendar"></i> 16 April 2024</span>
+                                </div>
+                                <h3>Panduan Memilih Media Tanam dan Pot yang Tepat</h3>
+                                <p class="article-excerpt">Komposisi media tanam yang tepat sangat penting. Pelajari tentang tanah, sekam, cocopeat, dan jenis pot yang sesuai.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Tanah</span>
+                                    <span class="tag">Sekam Bakar</span>
+                                    <span class="tag">Pot Drainase</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Tip 5 -->
+                        <article class="tip-detailed" data-category="indoor">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tanaman Indoor">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Tanaman Indoor</span>
+                                    <span class="article-date"><i class="far calendar"></i> 14 April 2024</span>
+                                </div>
+                                <h3>7 Tanaman Indoor Paling Tahan Banting untuk Pemula</h3>
+                                <p class="article-excerpt">Rekomendasi tanaman hias indoor yang mudah dirawat dan tahan terhadap kondisi ruangan dengan cahaya terbatas.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Pemula</span>
+                                    <span class="tag">Tahan Banting</span>
+                                    <span class="tag">Low Light</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Tip 6 -->
+                        <article class="tip-detailed" data-category="outdoor">
+                            <div class="tip-image">
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tanaman Outdoor">
+                            </div>
+                            <div class="tip-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Tanaman Outdoor</span>
+                                    <span class="article-date"><i class="far fa-calendar"></i> 12 April 2024</span>
+                                </div>
+                                <h3>Merawat Tanaman Outdoor di Musim Hujan dan Kemarau</h3>
+                                <p class="article-excerpt">Strategi perawatan tanaman outdoor yang berbeda untuk musim hujan dan kemarau. Tips menjaga tanaman tetap sehat.</p>
+                                <div class="tip-tags">
+                                    <span class="tag">Musim Hujan</span>
+                                    <span class="tag">Musim Kemarau</span>
+                                    <span class="tag">Perawatan Musiman</span>
+                                </div>
+                                <a href="#" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pertanyaan <span class="highlight">Umum</span></h2>
+                <p class="section-description">Temukan jawaban untuk pertanyaan yang sering diajukan tentang perawatan tanaman.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa kali saya harus menyiram tanaman indoor?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Frekuensi penyiraman tergantung pada jenis tanaman, ukuran pot, dan kondisi lingkungan. Umumnya, tanaman indoor disiram 1-2 kali seminggu. Periksa kelembaban tanah dengan memasukkan jari sedalam 2-3 cm. Jika terasa kering, saatnya menyiram.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apa tanda-tanda tanaman kekurangan cahaya?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tanda-tanda tanaman kekurangan cahaya: pertumbuhan memanjang dan kurus, daun berwarna pucat atau hijau muda, daun bagian bawah menguning dan rontok, tanaman tidak berbunga, dan pertumbuhan sangat lambat.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kapan waktu terbaik untuk memupuk tanaman?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Waktu terbaik untuk memupuk adalah selama musim tumbuh (biasanya musim semi dan panas). Hindari memupuk di musim dingin ketika tanaman dalam kondisi dorman. Pupuk cair bisa diberikan setiap 2-4 minggu, sedangkan pupuk slow-release setiap 3-6 bulan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara mengatasi hama kutu daun secara alami?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Untuk mengatasi kutu daun secara alami: 1) Semprot dengan campuran air dan sabun cuci piring, 2) Gunakan minyak neem, 3) Tanam tanaman pengusir hama seperti lavender atau mint, 4) Ajak predator alami seperti ladybug, 5) Bersihkan daun secara rutin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h2>Dapatkan Tips Eksklusif</h2>
+                    <p>Bergabunglah dengan komunitas pecinta tanaman dan dapatkan tips perawatan eksklusif langsung ke email Anda setiap minggu.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Masukkan email Anda" required>
+                            <button type="submit" class="btn-primary">Berlangganan</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="newsletter-image">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Newsletter Tanaman">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-leaf"></i> <span class="highlight">GREEN</span>LEAF</div>
+                    <p class="footer-description">Platform jual beli tanaman hias online terpercaya dengan kualitas terjamin & Terbaik dan layanan konsultasi gratis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kategori Tanaman</h3>
+                    <ul class="footer-links">
+                        <li><a href="katalog.html?category=indoor">Tanaman Indoor</a></li>
+                        <li><a href="katalog.html?category=outdoor">Tanaman Outdoor</a></li>
+                        <li><a href="katalog.html?category=sukulen">Sukulen & Kaktus</a></li>
+                        <li><a href="katalog.html?category=bunga">Tanaman Berbunga</a></li>
+                        <li><a href="katalog.html?category=herbal">Tanaman Herbal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Cara Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Garansi Tanaman</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Jl. Boulevard, Grand Depok City</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>greenleaf@gmail.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+62 85773001224</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Tanaman.id. Hak Cipta Dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kontak.html">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="tanaman.js"></script>
+</body>
+</html>

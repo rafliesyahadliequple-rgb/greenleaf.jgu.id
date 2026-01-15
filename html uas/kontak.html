@@ -1,0 +1,449 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami | Tanaman.id</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tanaman.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="loader-circle"></circle>
+            </svg>
+            <div class="loader-text">Greenleaf</div>
+        </div>
+    </div>
+    
+    <!-- Cursor Custom -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="highlight">GREEN</span>LEAF
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="tips.html">Tips Perawatan</a></li>
+                <li class="active"><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="#" class="nav-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a></li>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Hubungi Kami</div>
+                <h1 class="section-title">Kontak <span class="highlight">Konsultasi</span></h1>
+                <p class="section-description">Butuh bantuan untuk tanaman Anda? Tim ahli kami siap membantu dengan konsultasi gratis. Hubungi kami melalui berbagai cara yang tersedia.</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info-detailed">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Alamat Kami</h3>
+                        <p>Jl. Kebun Raya No. 123, Kebayoran Baru, Jakarta Selatan 12120</p>
+                        <a href="#" class="contact-link"><i class="fas fa-directions"></i> Dapatkan Petunjuk</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Telepon & WhatsApp</h3>
+                        <p>+62 812 3456 7890 (Customer Service)</p>
+                        <p>+62 813 4567 8901 (Konsultasi Tanaman)</p>
+                        <a href="https://wa.me/6281234567890" class="contact-link whatsapp"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@tanaman.id (Informasi Umum)</p>
+                        <p>konsultasi@tanaman.id (Konsultasi Tanaman)</p>
+                        <p>order@tanaman.id (Pesanan & Pengiriman)</p>
+                        <a href="mailto:info@tanaman.id" class="contact-link"><i class="fas fa-paper-plane"></i> Kirim Email</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Jam Operasional</h3>
+                        <p><strong>Senin - Jumat:</strong> 08:00 - 17:00 WIB</p>
+                        <p><strong>Sabtu:</strong> 09:00 - 15:00 WIB</p>
+                        <p><strong>Minggu & Hari Libur:</strong> Tutup</p>
+                        <small>*Konsultasi online tersedia 24/7 melalui form di samping</small>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-detailed">
+                    <div class="form-header">
+                        <h2>Form Konsultasi Gratis</h2>
+                        <p>Isi form di bawah ini untuk mendapatkan konsultasi gratis dari ahli tanaman kami. Kami akan membalas dalam 1x24 jam.</p>
+                    </div>
+
+                    <form id="consultation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap *</label>
+                                <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="nama@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Nomor WhatsApp *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0812 3456 7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="plant-type">Jenis Tanaman</label>
+                                <select id="plant-type" name="plant-type">
+                                    <option value="">Pilih jenis tanaman</option>
+                                    <option value="indoor">Tanaman Indoor</option>
+                                    <option value="outdoor">Tanaman Outdoor</option>
+                                    <option value="sukulen">Sukulen & Kaktus</option>
+                                    <option value="bunga">Tanaman Berbunga</option>
+                                    <option value="herbal">Tanaman Herbal</option>
+                                    <option value="lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek Konsultasi *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih subjek konsultasi</option>
+                                <option value="penyakit">Masalah Penyakit Tanaman</option>
+                                <option value="hama">Serangan Hama</option>
+                                <option value="perawatan">Tips Perawatan</option>
+                                <option value="pemilihan">Pemilihan Tanaman</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="problem-detail">Detail Masalah *</label>
+                            <textarea id="problem-detail" name="problem-detail" rows="5" required placeholder="Jelaskan kondisi tanaman Anda secara detail, termasuk gejala yang muncul, sudah berapa lama, dan perawatan yang sudah dilakukan..."></textarea>
+                            <small class="form-help">Tambahkan foto tanaman jika memungkinkan dengan mengunggah file di bawah</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="plant-photo">Unggah Foto Tanaman (Opsional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="plant-photo" name="plant-photo" accept="image/*">
+                                <label for="plant-photo" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Pilih file atau drag & drop di sini</span>
+                                    <small>Maksimum ukuran file: 5MB (JPG, PNG)</small>
+                                </label>
+                            </div>
+                            <div id="file-preview" class="file-preview"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Tingkat Urgensi</label>
+                            <div class="urgency-levels">
+                                <label class="urgency-option">
+                                    <input type="radio" name="urgency" value="low">
+                                    <span class="urgency-dot low"></span>
+                                    <span>Rendah (Hanya konsultasi)</span>
+                                </label>
+                                <label class="urgency-option">
+                                    <input type="radio" name="urgency" value="medium" checked>
+                                    <span class="urgency-dot medium"></span>
+                                    <span>Sedang (Perlu penanganan)</span>
+                                </label>
+                                <label class="urgency-option">
+                                    <input type="radio" name="urgency" value="high">
+                                    <span class="urgency-dot high"></span>
+                                    <span>Tinggi (Darurat, tanaman sekarat)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>Saya setuju dengan <a href="#">syarat dan ketentuan</a> serta mengizinkan Tanaman.id menggunakan data saya untuk keperluan konsultasi</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Kirim Permintaan Konsultasi
+                        </button>
+                    </form>
+
+                    <div class="form-footer">
+                        <p><i class="fas fa-info-circle"></i> Kami akan menghubungi Anda via WhatsApp atau Email dalam 1x24 jam. Untuk keadaan darurat, hubungi langsung via telepon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <div class="section-header">
+                    <h2 class="section-title">Tim <span class="highlight">Ahli</span> Kami</h2>
+                    <p class="section-description">Tim ahli tanaman yang berpengalaman siap membantu Anda merawat tanaman dengan baik.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ahli Tanaman">
+                        </div>
+                        <div class="member-info">
+                            <h3>Dr. Budi Santoso</h3>
+                            <p class="member-role">Ahli Hortikultura</p>
+                            <p class="member-bio">Spesialis tanaman hias dengan pengalaman 15 tahun. Lulusan IPB dengan gelar doktor di bidang hortikultura.</p>
+                            <div class="member-expertise">
+                                <span class="expertise-tag">Tanaman Hias</span>
+                                <span class="expertise-tag">Penyakit Tanaman</span>
+                                <span class="expertise-tag">Nutrisi Tanaman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://www.ksp.go.id/wp-content/uploads/2025/02/prabowo-pertumbuhan.jpg" alt="Ahli Tanaman">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ir. Sari Wijaya</h3>
+                            <p class="member-role">Spesialis Tanaman Indoor</p>
+                            <p class="member-bio">Ahli dalam perawatan tanaman indoor dengan spesialisasi tanaman pembersih udara dan dekorasi interior.</p>
+                            <div class="member-expertise">
+                                <span class="expertise-tag">Indoor Plants</span>
+                                <span class="expertise-tag">Dekorasi</span>
+                                <span class="expertise-tag">Pencahayaan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ahli Tanaman">
+                        </div>
+                        <div class="member-info">
+                            <h3>M. Arif Rahman</h3>
+                            <p class="member-role">Ahli Sukulen & Kaktus</p>
+                            <p class="member-bio">Spesialis tanaman sukulen dan kaktus dengan koleksi pribadi lebih dari 500 spesies dari seluruh dunia.</p>
+                            <div class="member-expertise">
+                                <span class="expertise-tag">Sukulen</span>
+                                <span class="expertise-tag">Kaktus</span>
+                                <span class="expertise-tag">Perbanyakan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lokasi <span class="highlight">Kami</span></h2>
+                <p class="section-description">Kunjungi kebun pembibitan dan showroom kami untuk melihat koleksi tanaman secara langsung.</p>
+            </div>
+
+            <div class="map-container">
+                <!-- Google Maps Embed -->
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2186340000003!2d106.8254061!3d-6.419096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb97981e953d%3A0x7040f2673277d58f!2sKampus%20Jakarta%20Global%20University!5e0!3m2!1sid!2sid!4v1641234567890" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="map-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-car"></i> Parkir</h3>
+                        <p>Tersedia area parkir luas untuk mobil dan motor. Gratis untuk pengunjung.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-wheelchair"></i> Aksesibilitas</h3>
+                        <p>Area showroom ramah untuk difabel dengan jalur khusus dan fasilitas lengkap.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-coffee"></i> Fasilitas</h3>
+                        <p>Tersedia café dengan view kebun, area bermain anak, dan toilet bersih.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-gift"></i> Workshop</h3>
+                        <p>Ikuti workshop perawatan tanaman setiap akhir pekan. Gratis untuk pembeli.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Contact Section -->
+    <section class="faq-contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pertanyaan <span class="highlight">Seputar Layanan</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-shipping-fast"></i> Berapa lama waktu pengiriman?</h3>
+                    <p>Pengiriman dalam kota Jakarta: 1-2 hari kerja. Luar kota: 2-5 hari kerja. Untuk tanaman hidup, kami menggunakan ekspedisi khusus dengan pengemasan khusus.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-hand-holding-usd"></i> Apa garansi yang diberikan?</h3>
+                    <p>Kami memberikan garansi hidup 7 hari untuk semua tanaman. Jika tanaman mati dalam 7 hari, kami akan ganti dengan yang baru atau kembalikan uang.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-calendar-check"></i> Kapan workshop diadakan?</h3>
+                    <p>Workshop perawatan tanaman diadakan setiap Sabtu pukul 10:00-12:00. Gratis untuk pembeli, Rp 50.000 untuk non-pembeli. Daftar via WhatsApp minimal 2 hari sebelumnya.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-credit-card"></i> Metode pembayaran apa saja yang diterima?</h3>
+                    <p>Kami menerima transfer bank, e-wallet (OVO, GoPay, Dana), QRIS, dan cash on delivery (COD) untuk area Jakarta dan sekitarnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h2>Butuh Bantuan Cepat?</h2>
+                    <p>Hubungi customer service kami yang siap membantu 24/7 untuk pertanyaan mendesak tentang tanaman Anda.</p>
+                    <div class="quick-contact">
+                        <a href="https://wa.me/6281234567890" class="btn-primary whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+                        </a>
+                        <a href="tel:+6281234567890" class="btn-secondary">
+                            <i class="fas fa-phone"></i> Telepon Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="newsletter-image">
+                    <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Customer Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-leaf"></i> <span class="highlight">GREEN</span>LEAF</div>
+                    <p class="footer-description">Platform jual beli tanaman hias online terpercaya dengan kualitas terjamin & Terbaikdan layanan konsultasi gratis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kategori Tanaman</h3>
+                    <ul class="footer-links">
+                        <li><a href="katalog.html?category=indoor">Tanaman Indoor</a></li>
+                        <li><a href="katalog.html?category=outdoor">Tanaman Outdoor</a></li>
+                        <li><a href="katalog.html?category=sukulen">Sukulen & Kaktus</a></li>
+                        <li><a href="katalog.html?category=bunga">Tanaman Berbunga</a></li>
+                        <li><a href="katalog.html?category=herbal">Tanaman Herbal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Cara Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Garansi Tanaman</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Jl. Boulevard, Grand Depok City</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>greenleaf@gmail.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+62 85773001224</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Greenleaf. Hak Cipta Dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kontak.html">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content success-modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Permintaan Konsultasi Terkirim!</h2>
+            <p>Terima kasih telah menghubungi kami. Tim ahli tanaman akan menghubungi Anda dalam 1x24 jam via WhatsApp atau Email.</p>
+            <p><strong>Nomor Tiket: #CONS-2024-00123</strong></p>
+            <div class="modal-actions">
+                <button class="btn-primary" id="close-modal">Tutup</button>
+                <a href="https://wa.me/6281234567890" class="btn-secondary"><i class="fab fa-whatsapp"></i> Chat Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="tanaman.js"></script>
+</body>
+</html>

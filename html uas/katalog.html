@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Tanaman | Tanaman.id</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tanaman.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="loader-circle"></circle>
+            </svg>
+            <div class="loader-text">Greenleaf</div>
+        </div>
+    </div>
+    
+    <!-- Cursor Custom -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="highlight">GREEN</span>LEAF
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="katalog.html" class="nav-link">Katalog</a></li>
+                <li><a href="tips.html">Tips Perawatan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="#" class="nav-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a></li>
+                <li><a href="#" class="btn-primary">Belanja Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h1 class="section-title">Katalog <span class="highlight">Tanaman</span></h1>
+                <p class="section-description">Temukan koleksi lengkap tanaman hias kami dengan berbagai jenis dan ukuran.</p>
+            </div>
+
+            <div class="catalog-controls">
+                <div class="catalog-sort">
+                    <label for="sort">Urutkan:</label>
+                    <select id="sort">
+                        <option value="popular">Paling Populer</option>
+                        <option value="new">Terbaru</option>
+                        <option value="price-low">Harga Terendah</option>
+                        <option value="price-high">Harga Tertinggi</option>
+                        <option value="name">Nama A-Z</option>
+                    </select>
+                </div>
+                
+                <div class="catalog-view">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="catalog-layout">
+                <aside class="catalog-sidebar">
+                    <h3 class="sidebar-title">Filter Tanaman</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Kategori</h4>
+                        <ul class="filter-options">
+                            <li><input type="checkbox" id="cat-indoor" checked> <label for="cat-indoor">Tanaman Indoor</label></li>
+                            <li><input type="checkbox" id="cat-outdoor"> <label for="cat-outdoor">Tanaman Outdoor</label></li>
+                            <li><input type="checkbox" id="cat-sukulen"> <label for="cat-sukulen">Sukulen & Kaktus</label></li>
+                            <li><input type="checkbox" id="cat-bunga"> <label for="cat-bunga">Tanaman Berbunga</label></li>
+                            <li><input type="checkbox" id="cat-herbal"> <label for="cat-herbal">Tanaman Herbal</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Kebutuhan Cahaya</h4>
+                        <ul class="filter-options">
+                            <li><input type="checkbox" id="light-low"> <label for="light-low">Cahaya Rendah</label></li>
+                            <li><input type="checkbox" id="light-medium"> <label for="light-medium">Cahaya Sedang</label></li>
+                            <li><input type="checkbox" id="light-high"> <label for="light-high">Cahaya Tinggi</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Harga</h4>
+                        <div class="price-range">
+                            <input type="number" placeholder="Min" id="price-min">
+                            <input type="number" placeholder="Max" id="price-max">
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" style="width: 100%;">Terapkan Filter</button>
+                </aside>
+
+                <div class="catalog-main">
+                    <div class="catalog-grid grid-view" id="plants-grid">
+                        <!-- Plants will be loaded here dynamically -->
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h2>Butuh Bantuan Memilih Tanaman?</h2>
+                    <p>Konsultasi gratis dengan ahli tanaman kami untuk mendapatkan rekomendasi tanaman yang tepat untuk kondisi rumah Anda.</p>
+                    <a href="kontak.html" class="btn-primary">Konsultasi Sekarang</a>
+                </div>
+                <div class="newsletter-image">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Konsultasi Tanaman">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-leaf"></i> <span class="highlight">GREEN</span>LEAF</div>
+                    <p class="footer-description">Platform jual beli tanaman hias online terpercaya dengan kualitas terjamin & Terbaik dan layanan konsultasi gratis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kategori Tanaman</h3>
+                    <ul class="footer-links">
+                        <li><a href="katalog.html?category=indoor">Tanaman Indoor</a></li>
+                        <li><a href="katalog.html?category=outdoor">Tanaman Outdoor</a></li>
+                        <li><a href="katalog.html?category=sukulen">Sukulen & Kaktus</a></li>
+                        <li><a href="katalog.html?category=bunga">Tanaman Berbunga</a></li>
+                        <li><a href="katalog.html?category=herbal">Tanaman Herbal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Cara Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Garansi Tanaman</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Jl. Boulevard, Grand Depok City</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>greenleaf@gmail.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+62 85773001224</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 greenleaf. Hak Cipta Dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kontak.html">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="tanaman.js"></script>
+</body>
+</html>

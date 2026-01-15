@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanaman.id | Jual Tanaman Hias Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tanaman.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="loader-circle"></circle>
+            </svg>
+            <div class="loader-text">Greenleaf</div>
+        </div>
+    </div>
+    
+    <!-- Cursor Custom -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="highlight">GREEN</span>LEAF
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+           <ul class="nav-links">
+    <li class="active"><a href="index.html" class="nav-link">Beranda</a></li>
+    <li><a href="katalog.html">Katalog</a></li>
+    <li><a href="tips.html">Tips Perawatan</a></li>
+    <li><a href="kontak.html">Kontak</a></li>
+    <li><a href="#" class="nav-link cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">3</span>
+    </a></li>
+    <li><a href="#" class="btn-primary">Belanja Sekarang</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="text-reveal">
+                    <h1 class="hero-title">Hijaukan Rumah dengan <span class="typed-text"></span></h1>
+                    <div class="hero-subtitle">
+                        <p>Temukan koleksi tanaman hias terbaik untuk menghiasi rumah dan ruang kerja Anda. Tanaman sehat dengan perawatan terjamin.</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="katalog.html" class="btn-primary">Jelajahi Katalog</a>
+                        <a href="#featured" class="btn-secondary">Tanaman Terlaris <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="achievement">
+                        <div class="achievement-item">
+                            <span class="counter" data-target="5000">0</span>+
+                            <p>Tanaman Terjual</p>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="counter" data-target="200">0</span>+
+                            <p>Jenis Tanaman</p>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="counter" data-target="98">0</span>%
+                            <p>Kepuasan Pelanggan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Tanaman Hias Indoor">
+                    </div>
+                    <div class="floating-card card-1">
+                        <div class="card-icon"><i class="fa-solid fa-truck"></i></div>
+                        <div class="card-text">Gratis Ongkir</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <div class="card-text">Tanaman Segar</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+                        <div class="card-text">Konsultasi Gratis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250">
+                <path d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Featured Plants Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Tanaman Pilihan</div>
+                <h2 class="section-title">Tanaman <span class="highlight">Terlaris</span></h2>
+                <p class="section-description">Temukan tanaman hias favorit yang paling banyak dibeli oleh pelanggan kami. Setiap tanaman dipilih dengan kualitas terbaik.</p>
+            </div>
+
+            <div class="plants-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="indoor">Indoor</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+                <button class="filter-btn" data-filter="sukulen">Sukulen</button>
+                <button class="filter-btn" data-filter="bunga">Tanaman Berbunga</button>
+            </div>
+
+            <div class="plants-grid">
+                <!-- Plant Card 1 -->
+                <div class="plant-card" data-category="indoor">
+                    <div class="plant-badge">Terlaris</div>
+                    <div class="plant-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Monstera Deliciosa">
+                    </div>
+                    <div class="plant-content">
+                        <div class="plant-info">
+                            <div class="plant-type">Indoor</div>
+                            <div class="plant-light">
+                                <i class="fas fa-sun"></i>
+                                <span>Cahaya Sedang</span>
+                            </div>
+                        </div>
+                        <h3 class="plant-title">Monstera Deliciosa</h3>
+                        <p class="plant-description">Tanaman hias dengan daun unik berlubang, cocok untuk ruang tamu atau kantor. Mudah dirawat dan tahan lama.</p>
+                        <div class="plant-footer">
+                            <div class="plant-price">Rp 150.000</div>
+                            <button class="plant-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plant Card 2 -->
+                <div class="plant-card" data-category="sukulen">
+                    <div class="plant-badge sale">Diskon 20%</div>
+                    <div class="plant-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="plant-image">
+                        <img src="https://asset.kompas.com/crops/oegh-x5lCp46Gt-TiBcxpJkKg8A=/0x57:1000x724/1200x800/data/photo/2023/03/21/641958ad8f8ed.jpg" alt="Lidah Mertua">
+                    </div>
+                    <div class="plant-content">
+                        <div class="plant-info">
+                            <div class="plant-type">Sukulen</div>
+                            <div class="plant-light">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-sun"></i>
+                                <span>Cahaya Tinggi</span>
+                            </div>
+                        </div>
+                        <h3 class="plant-title">Lidah Mertua (Sansevieria)</h3>
+                        <p class="plant-description">Tanaman pembersih udara yang sangat efektif. Tahan kekeringan dan cocok untuk pemula.</p>
+                        <div class="plant-footer">
+                            <div class="plant-price">
+                                <span class="old-price">Rp 75.000</span>
+                                Rp 60.000
+                            </div>
+                            <button class="plant-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plant Card 3 -->
+                <div class="plant-card" data-category="bunga">
+                    <div class="plant-badge new">Baru</div>
+                    <div class="plant-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Anggrek Bulan">
+                    </div>
+                    <div class="plant-content">
+                        <div class="plant-info">
+                            <div class="plant-type">Tanaman Berbunga</div>
+                            <div class="plant-light">
+                                <i class="fas fa-sun"></i>
+                                <span>Cahaya Sedang</span>
+                            </div>
+                        </div>
+                        <h3 class="plant-title">Anggrek Bulan (Phalaenopsis)</h3>
+                        <p class="plant-description">Anggrek dengan bunga indah yang tahan lama. Cocok sebagai hadiah atau dekorasi meja.</p>
+                        <div class="plant-footer">
+                            <div class="plant-price">Rp 120.000</div>
+                            <button class="plant-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plant Card 4 -->
+                <div class="plant-card" data-category="outdoor">
+                    <div class="plant-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pohon Uang">
+                    </div>
+                    <div class="plant-content">
+                        <div class="plant-info">
+                            <div class="plant-type">Outdoor</div>
+                            <div class="plant-light">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-sun"></i>
+                                <span>Cahaya Tinggi</span>
+                            </div>
+                        </div>
+                        <h3 class="plant-title">Pohon Uang (Pachira Aquatica)</h3>
+                        <p class="plant-description">Dipercaya membawa keberuntungan dan kemakmuran. Cocok untuk taman atau teras rumah.</p>
+                        <div class="plant-footer">
+                            <div class="plant-price">Rp 250.000</div>
+                            <button class="plant-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plants-cta">
+                <a href="katalog.html" class="btn-secondary">Lihat Semua Tanaman <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Kategori</div>
+                <h2 class="section-title">Jelajahi <span class="highlight">Kategori</span> Tanaman</h2>
+                <p class="section-description">Temukan tanaman berdasarkan kategori yang sesuai dengan kebutuhan dan kondisi lingkungan Anda.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="category-title">Tanaman Indoor</h3>
+                    <p class="category-count">85 Jenis</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3 class="category-title">Tanaman Outdoor</h3>
+                    <p class="category-count">65 Jenis</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="category-title">Sukulen & Kaktus</h3>
+                    <p class="category-count">42 Jenis</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="category-title">Tanaman Herbal</h3>
+                    <p class="category-count">28 Jenis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+   <!-- How to Care Section -->
+<section id="how-it-works" class="care-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Tips Perawatan</div>
+            <h2 class="section-title">Cara <span class="highlight">Merawat</span> Tanaman</h2>
+            <p class="section-description">Ikuti langkah sederhana ini untuk menjaga tanaman Anda tetap sehat dan tumbuh subur.</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-icon"><i class="fas fa-sun"></i></div>
+                <div class="step-number">01</div>
+                <h3 class="step-title">Pencahayaan Tepat</h3>
+                <p class="step-description">Kenali kebutuhan cahaya tanaman Anda. Beberapa butuh sinar matahari langsung, lainnya hanya butuh cahaya tidak langsung.</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-icon"><i class="fas fa-tint"></i></div>
+                <div class="step-number">02</div>
+                <h3 class="step-title">Penyiraman Rutin</h3>
+                <p class="step-description">Siram tanaman sesuai kebutuhan. Jangan berlebihan atau kurang. Periksa kelembaban tanah sebelum menyiram.</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-icon"><i class="fas fa-utensils"></i></div>
+                <div class="step-number">03</div>
+                <h3 class="step-title">Pemupukan Berkala</h3>
+                <p class="step-description">Berikan pupuk setiap 2-4 minggu selama musim tumbuh. Gunakan pupuk khusus tanaman hias untuk hasil terbaik.</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-icon"><i class="fas fa-cut"></i></div>
+                <div class="step-number">04</div>
+                <h3 class="step-title">Perawatan Daun</h3>
+                <p class="step-description">Bersihkan daun secara rutin dari debu. Potong daun yang menguning atau rusak untuk pertumbuhan yang sehat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Artikel Terbaru</div>
+                <h2 class="section-title">Tips & <span class="highlight">Trik</span> Perawatan</h2>
+                <p class="section-description">Pelajari cara merawat tanaman dengan benar melalui artikel-artikel terbaru dari ahli tanaman kami.</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tips Perawatan Tanaman">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="tip-category">Perawatan</span>
+                            <span class="tip-date"><i class="far fa-calendar"></i> 15 April 2024</span>
+                        </div>
+                        <h3 class="tip-title">5 Kesalahan Umum dalam Merawat Tanaman Indoor</h3>
+                        <p class="tip-excerpt">Pelajari kesalahan yang sering dilakukan pemula dalam merawat tanaman hias indoor dan cara menghindarinya.</p>
+                        <a href="tips.html" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tanaman Pemurni Udara">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="tip-category">Kesehatan</span>
+                            <span class="tip-date"><i class="far fa-calendar"></i> 10 April 2024</span>
+                        </div>
+                        <h3 class="tip-title">10 Tanaman Terbaik untuk Memurnikan Udara dalam Ruangan</h3>
+                        <p class="tip-excerpt">Temukan tanaman hias yang efektif membersihkan udara dari polutan dan meningkatkan kualitas udara di rumah.</p>
+                        <a href="tips.html" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://www.rukita.co/stories/wp-content/uploads/2019/12/Tanaman-Hias-dalam-Rumah.jpg" alt="Tanaman untuk Pemula">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="tip-category">Untuk Pemula</span>
+                            <span class="tip-date"><i class="far fa-calendar"></i> 5 April 2024</span>
+                        </div>
+                        <h3 class="tip-title">7 Tanaman Hias yang Tahan Banting untuk Pemula</h3>
+                        <p class="tip-excerpt">Rekomendasi tanaman hias yang mudah dirawat dan tahan terhadap kesalahan perawatan untuk pemula.</p>
+                        <a href="tips.html" class="tip-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h2>Dapatkan Tips Perawatan Gratis</h2>
+                    <p>Berlangganan newsletter kami untuk mendapatkan informasi tentang tanaman baru, promo spesial, dan tips perawatan langsung ke email Anda.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Masukkan email Anda" required>
+                            <button type="submit" class="btn-primary">Berlangganan</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="newsletter-image">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Newsletter Tanaman">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-leaf"></i> <span class="highlight">GREEN</span>LEAF</div>
+                    <p class="footer-description">Platform jual beli tanaman hias online terpercaya dengan kualitas terjamin & Terbaik dan layanan konsultasi gratis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kategori Tanaman</h3>
+                    <ul class="footer-links">
+                        <li><a href="katalog.html?category=indoor">Tanaman Indoor</a></li>
+                        <li><a href="katalog.html?category=outdoor">Tanaman Outdoor</a></li>
+                        <li><a href="katalog.html?category=sukulen">Sukulen & Kaktus</a></li>
+                        <li><a href="katalog.html?category=bunga">Tanaman Berbunga</a></li>
+                        <li><a href="katalog.html?category=herbal">Tanaman Herbal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Cara Pembayaran</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Garansi Tanaman</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Jl. Boulevard, Grand Depok City</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>greenleaf@gmail.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+62 85773001224</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Greenleaf. Hak Cipta Dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kontak.html">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2>Keranjang Belanja</h2>
+            <!-- Cart content will be loaded here -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="tanaman.js"></script>
+</body>
+</html>
